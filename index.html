@@ -1,73 +1,194 @@
 <!DOCTYPE html>
 <html lang="es">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Promoción Exclusiva Sam's Club</title>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="styles.css">
-   </head>
-   <body>
-      <div class="card-container">
-         <div class="header-section">
-            <p class="pre-headline">Aprovecha tu beneficio exclusivo en</p>
-            <div class="sams-logo">
-               <img src="img/logo.jpg" alt="Sam's Club Logo" class="sams-logo-img">
-            </div>
-            <h2>Hazte Socio o Renueva tu membresía y ahorra</h2>
-         </div>
-         <div class="membership-offers">
-            <div class="offer-box plus">
-               <h3>Membresía Plus</h3>
-               <img src="img/dorada.jpg" alt="Tarjeta Sam's Club Plus" class="membership-card-img">
-               <p class="price-old">De: <span>$1,200</span></p>
-               <p class="price-new">a: <span>$900</span></p>
-            </div>
-            <div class="offer-box benefits">
-               <h3>Membresía Benefits</h3>
-               <img src="img/negra.jpg" alt="Tarjeta Sam's Club Benefits" class="membership-card-img">
-               <p class="price-old">De: <span>$700</span></p>
-               <p class="price-new">a: <span>$450</span></p>
-            </div>
-         </div>
-         <div class="all-benefits-grid">
-            <div class="benefit-item-inline">
-               <span class="benefit-icon">💸</span>
-               <p><strong>2% de Recompensa</strong> en tus compras</p>
-            </div>
-            <div class="benefit-item-inline">
-               <span class="benefit-icon">💸</span>
-               <p><strong>Descuentos </strong> fuera del club en mas de 1000 estabecimientos</p>
-            </div>
-            <div class="benefit-item-inline">
-               <span class="benefit-icon">📦</span>
-               <p><strong>Envíos gratis ilimitados</strong> en compras de $999 o más</p>
-            </div>
-            <p><strong> </strong> </p>
-            <div class="benefit-item-inline">
-               <span class="benefit-icon">⭐</span>
-               <p><strong>Promociones especiales</strong> todo el año</p>
-            </div>
-            <p><strong></strong></p>
-            <div class="benefit-item-inline">
-               <span class="benefit-icon">🏷️</span>
-               <p><strong>Descuentos </strong> fuera del club en más de 1,000 establecimientos</p>
-            </div>
-         </div>
-         <p class="validity-info">Aplica para Titular y Complementario, cuentan con un año de vigencia.</p>
-         <br>
-         <p class="validity-info">Válido del 01 al 31 de julio del 2025.</p>
-         <div class="terms-conditions">
-            <p>Hazte Socio o Renueva tu membresía Benefits y ahorra un 40% sobre precio vigente. Hazte Socio o Renueva tu membresía Plus y ahorra 40% sobre precio vigente. Beneficios no reembolsables. No acumulable con otras promociones. No aplica para Ascenso. No aplica en Clubes. Consulta términos y condiciones en <a href="https://www.sams.com.mx" target="_blank">sams.com.mx</a></p>
-         </div>
- <div class="contact-info">
-	<h4>Contacto: SONIA RODRIGUEZ</h4>
-	<p class="contact-phone">Cel. WhatsApp: <a href="https://wa.me/5215613604912" target="_blank">5613 60 49 12</a></p>
-	<p class="contact-phone">Paga tu membresía aquí: <a href="https://pay.billpocket.com/sams2024" target="_blank">https://pay.billpocket.com/sams2024</a></p>
- </div>
-         <p class="promo-disclaimer">PROMOCIÓN NO APLICA EN CLUBES</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promoción Exclusiva Sam's Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      @media (max-width: 1024px) {
+        .membership-offers {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .all-benefits-grid {
+          display: none;
+        }
+
+        .benefits-plus-mobile,
+        .benefits-benefits-mobile {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-top: 10px;
+        }
+
+        .benefit-item-inline {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+
+      @media (min-width: 1025px) {
+        .benefits-plus-mobile,
+        .benefits-benefits-mobile {
+          display: none;
+        }
+
+        .all-benefits-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 15px;
+          margin-top: 30px;
+        }
+
+        .benefit-item-inline {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-container">
+      <div class="header-section">
+        <p class="pre-headline">Aprovecha tu beneficio exclusivo en</p>
+        <div class="sams-logo">
+          <img src="img/logo.jpg" alt="Sam's Club Logo" class="sams-logo-img" />
+        </div>
+        <h2>Hazte Socio o Renueva tu membresía y ahorra</h2>
       </div>
-   </body>
+
+      <div class="membership-offers">
+        <div class="offer-box plus">
+          <h3>Membresía Plus</h3>
+          <img
+            src="img/dorada.jpg"
+            alt="Tarjeta Sam's Club Plus"
+            class="membership-card-img"
+          />
+          <p class="price-old">De: <span>$1,200</span></p>
+          <p class="price-new">a: <span>$900</span></p>
+          <div class="benefits-plus-mobile">
+            <div class="benefit-item-inline">
+              <span class="benefit-icon">💸</span>
+              <p><strong>2% de Recompensa</strong> en tus compras</p>
+            </div>
+            <div class="benefit-item-inline">
+              <span class="benefit-icon">📦</span>
+              <p>
+                <strong>Envíos gratis ilimitados</strong> en compras de $999 o
+                más
+              </p>
+            </div>
+            <div class="benefit-item-inline">
+              <span class="benefit-icon">⭐</span>
+              <p><strong>Promociones especiales</strong> todo el año</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="offer-box benefits">
+          <h3>Membresía Benefits</h3>
+          <img
+            src="img/negra.jpg"
+            alt="Tarjeta Sam's Club Benefits"
+            class="membership-card-img"
+          />
+          <p class="price-old">De: <span>$700</span></p>
+          <p class="price-new">a: <span>$450</span></p>
+          <div class="benefits-benefits-mobile">
+            <div class="benefit-item-inline">
+              <span class="benefit-icon">💸</span>
+              <p>
+                <strong>Descuentos </strong> fuera del club en mas de 1000
+                estabecimientos
+              </p>
+            </div>
+            <div class="benefit-item-inline">
+              <span class="benefit-icon">🏷️</span>
+              <p>
+                <strong>Descuentos </strong> fuera del club en más de 1,000
+                establecimientos
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="all-benefits-grid">
+        <div class="benefit-item-inline">
+          <span class="benefit-icon">💸</span>
+          <p><strong>2% de Recompensa</strong> en tus compras</p>
+        </div>
+        <div class="benefit-item-inline">
+          <span class="benefit-icon">💸</span>
+          <p>
+            <strong>Descuentos </strong> fuera del club en mas de 1000
+            estabecimientos
+          </p>
+        </div>
+        <div class="benefit-item-inline">
+          <span class="benefit-icon">📦</span>
+          <p>
+            <strong>Envíos gratis ilimitados</strong> en compras de $999 o más
+          </p>
+        </div>
+        <div class="benefit-item-inline">
+          <span class="benefit-icon">⭐</span>
+          <p><strong>Promociones especiales</strong> todo el año</p>
+        </div>
+        <div class="benefit-item-inline">
+          <span class="benefit-icon">🏷️</span>
+          <p>
+            <strong>Descuentos </strong> fuera del club en más de 1,000
+            establecimientos
+          </p>
+        </div>
+      </div>
+
+      <p class="validity-info">
+        Aplica para Titular y Complementario, cuentan con un año de vigencia.
+      </p>
+      <br />
+      <p class="validity-info">Válido del 01 al 31 de julio del 2025.</p>
+
+      <div class="terms-conditions">
+        <p>
+          Hazte Socio o Renueva tu membresía Benefits y ahorra un 40% sobre
+          precio vigente. Hazte Socio o Renueva tu membresía Plus y ahorra 40%
+          sobre precio vigente. Beneficios no reembolsables. No acumulable con
+          otras promociones. No aplica para Ascenso. No aplica en Clubes.
+          Consulta términos y condiciones en
+          <a href="https://www.sams.com.mx" target="_blank">sams.com.mx</a>
+        </p>
+      </div>
+
+      <div class="contact-info">
+        <h4>Contacto: SONIA RODRIGUEZ</h4>
+        <p class="contact-phone">
+          Cel. WhatsApp:
+          <a href="https://wa.me/5215613604912" target="_blank">5613 60 49 12</a>
+        </p>
+        <p class="contact-phone">
+          Paga tu membresía aquí:
+          <a href="https://pay.billpocket.com/sams2024" target="_blank"
+            >https://pay.billpocket.com/sams2024</a
+          >
+        </p>
+      </div>
+
+      <p class="promo-disclaimer">PROMOCIÓN NO APLICA EN CLUBES</p>
+    </div>
+  </body>
 </html>
