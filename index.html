@@ -12,49 +12,45 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <style>
+      .offer-box {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+      }
+
+      .membership-card-img {
+        width: 100%;
+        max-width: 300px;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .benefits-container {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .benefit-item-inline {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
       @media (max-width: 1024px) {
         .membership-offers {
           display: flex;
           flex-direction: column;
           gap: 30px;
         }
-
-        .all-benefits-grid {
-          display: none;
-        }
-
-        .benefits-plus-mobile,
-        .benefits-benefits-mobile {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          margin-top: 10px;
-        }
-
-        .benefit-item-inline {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-        }
       }
 
       @media (min-width: 1025px) {
-        .benefits-plus-mobile,
-        .benefits-benefits-mobile {
-          display: none;
-        }
-
-        .all-benefits-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-          gap: 15px;
-          margin-top: 30px;
-        }
-
-        .benefit-item-inline {
+        .membership-offers {
           display: flex;
-          align-items: center;
-          gap: 10px;
+          gap: 20px;
         }
       }
     </style>
@@ -70,6 +66,7 @@
       </div>
 
       <div class="membership-offers">
+        <!-- Membresía Plus -->
         <div class="offer-box plus">
           <h3>Membresía Plus</h3>
           <img
@@ -79,17 +76,15 @@
           />
           <p class="price-old">De: <span>$1,200</span></p>
           <p class="price-new">a: <span>$900</span></p>
-          <div class="benefits-plus-mobile">
+
+          <div class="benefits-container">
             <div class="benefit-item-inline">
               <span class="benefit-icon">💸</span>
               <p><strong>2% de Recompensa</strong> en tus compras</p>
             </div>
             <div class="benefit-item-inline">
               <span class="benefit-icon">📦</span>
-              <p>
-                <strong>Envíos gratis ilimitados</strong> en compras de $999 o
-                más
-              </p>
+              <p><strong>Envíos gratis ilimitados</strong> en compras de $999 o más</p>
             </div>
             <div class="benefit-item-inline">
               <span class="benefit-icon">⭐</span>
@@ -98,6 +93,7 @@
           </div>
         </div>
 
+        <!-- Membresía Benefits -->
         <div class="offer-box benefits">
           <h3>Membresía Benefits</h3>
           <img
@@ -107,53 +103,13 @@
           />
           <p class="price-old">De: <span>$700</span></p>
           <p class="price-new">a: <span>$450</span></p>
-          <div class="benefits-benefits-mobile">
-            <div class="benefit-item-inline">
-              <span class="benefit-icon">💸</span>
-              <p>
-                <strong>Descuentos </strong> fuera del club en mas de 1000
-                estabecimientos
-              </p>
-            </div>
+
+          <div class="benefits-container">
             <div class="benefit-item-inline">
               <span class="benefit-icon">🏷️</span>
-              <p>
-                <strong>Descuentos </strong> fuera del club en más de 1,000
-                establecimientos
-              </p>
+              <p>Descuentos fuera del club en más de 1,000 establecimientos</p>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div class="all-benefits-grid">
-        <div class="benefit-item-inline">
-          <span class="benefit-icon">💸</span>
-          <p><strong>2% de Recompensa</strong> en tus compras</p>
-        </div>
-        <div class="benefit-item-inline">
-          <span class="benefit-icon">💸</span>
-          <p>
-            <strong>Descuentos </strong> fuera del club en mas de 1000
-            estabecimientos
-          </p>
-        </div>
-        <div class="benefit-item-inline">
-          <span class="benefit-icon">📦</span>
-          <p>
-            <strong>Envíos gratis ilimitados</strong> en compras de $999 o más
-          </p>
-        </div>
-        <div class="benefit-item-inline">
-          <span class="benefit-icon">⭐</span>
-          <p><strong>Promociones especiales</strong> todo el año</p>
-        </div>
-        <div class="benefit-item-inline">
-          <span class="benefit-icon">🏷️</span>
-          <p>
-            <strong>Descuentos </strong> fuera del club en más de 1,000
-            establecimientos
-          </p>
         </div>
       </div>
 
